@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
 {%- from "gerrit_gitiles/map.jinja" import gerrit_gitiles, sls_block with context -%}
 {%- from 'gerrit/map.jinja' import settings, directory with context -%}
 
