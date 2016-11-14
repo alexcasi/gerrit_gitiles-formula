@@ -1,0 +1,6 @@
+gerrit_gitiles:
+  config:
+    gitiles:
+      customTemplates: etc/custom.soy
+    template:
+      customVariant: gerrit
