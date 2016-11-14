@@ -1,4 +1,7 @@
 gerrit_gitiles:
+  plugin:
+    source: https://gerrit-ci.gerritforge.com/view/Plugins-2.13/job/plugin-gitiles-stable-2.13/3/artifact/buck-out/gen/plugins/gitiles/gitiles.jar
+    source_hash: 260f1997dcccef39a215a3f0ee9339a6a063b06d1ffee092b16424a018fa3145
   config:
     gitiles:
       customTemplates: etc/custom.soy
