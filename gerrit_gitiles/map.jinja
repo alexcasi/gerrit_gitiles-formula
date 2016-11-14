@@ -10,3 +10,9 @@
 
 {# merge the actual gerrit_gitiles pillar into the above combined dict #}
 {% set gerrit_gitiles = salt['pillar.get']('gerrit_gitiles', default=lookup, merge=True) %}
+
+{% macro sls_block(dict) %}
+{% for key, value in dict.items() %}
+- {{ key }}: {{ value|json() }}
+{% endfor %}
+{% endmacro %}
