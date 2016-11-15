@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 # vim: ft=yaml
 
-{%- from "gerrit_gitiles/map.jinja" import gerrit_gitiles, sls_block with context -%}
-{%- from 'gerrit/map.jinja' import settings, directory with context -%}
+{% from "gerrit_gitiles/map.jinja" import gerrit_gitiles, sls_block with context %}
+{% from 'gerrit/map.jinja' import settings, directory with context %}
 
 gerrit_gitiles_plugin:
   file.managed:
     - name: {{ directory }}/plugins/gitiles.jar
     - user: {{ settings.user }}
     - group: {{ settings.group }}
-    {{ sls_block(gerrit_gitiles.plugin) }}
+    {{ sls_block(gerrit_gitiles.plugin) | indent(4) }}
     - watch_in:
       - service: gerrit_service
 

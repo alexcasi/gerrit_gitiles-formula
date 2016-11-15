@@ -13,6 +13,6 @@
 
 {% macro sls_block(dict) %}
 {% for key, value in dict.items() %}
-- {{ key }}: {{ value|json() }}
+- {{ key }}: {{ value | yaml_encode }}
 {% endfor %}
 {% endmacro %}
